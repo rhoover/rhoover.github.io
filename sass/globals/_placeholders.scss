@@ -1,0 +1,67 @@
+%typography-base {
+    font-size: rhythm(.75, 16px);
+}
+%typography-header-one {
+    font-size: rhythm(1.75, 16px);
+    font-weight: bold;
+    @include padding-leader(.25, 16px);
+    @include padding-trailer(.25, 16px);
+}
+
+
+%responsive-trigger {
+    &:after {
+        content: "phone";
+        display: none;
+        @include at-breakpoint($break-to-medium) {
+            content: "tablet";
+        }
+        @include at-breakpoint($break-to-medium-large) {
+            content: "small-desktop"
+        }
+        @include at-breakpoint($break-to-large) {
+            content: "large-desktop"
+        }
+    }
+}
+
+
+%white-text {
+    color: rgba($white, .80);
+}
+
+%black-text {
+    color: rgba($black, .75);
+}
+
+%button {
+    @include adjust-font-size-to(12px);
+    text-decoration: none;
+    @extend %white-text;
+    text-align: center;
+    border: .1em solid rgba($black, .5);
+    border-radius: .25em;
+    padding: rhythm(.5, 16px) $grid-padding;
+    @include box-shadow(.06em .1em  0 0 rgba($white, .1) inset);
+}
+
+//for layout:
+%button-carousel {
+    @include span-columns(8, 12);
+    @include squish(2,2);
+    margin-top: rhythm(.5, 16px);
+    margin-bottom: rhythm(.5, 16px);
+    padding: rhythm(.25, 16px);
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(5, 7);
+        @include squish(4,4);
+    }
+}
+
+// %arrows {
+@mixin arrows() {
+    position: absolute;
+    bottom: rhythm(1, 16px);
+    width: $column-width;
+    height: rhythm(2.7, 16px);
+}

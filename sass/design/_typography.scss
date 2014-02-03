@@ -1,0 +1,11 @@
+html {
+    @extend %typography-base;
+}
+p, li {
+    @extend %typography-base;
+    font-family: $Fabrica;
+}
+h1 {
+    @extend %typography-header-one;
+    font-family: $Fabrica;
+}

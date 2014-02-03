@@ -1,0 +1,7 @@
+.container {
+    height: 100%;
+    padding-top: rhythm(2, 22px);
+    @include at-breakpoint($break-to-medium-large) {
+        padding-top: 0;
+    }
+}

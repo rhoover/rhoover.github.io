@@ -1,0 +1,54 @@
+$sites-layout: smart;
+$sites-sprite-dimensions: true;
+@import "sites/*.png";
+@include all-sites-sprites;
+
+.carousel {
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(19 omega, 24);
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+.hero-site {
+    padding: rhythm(1, 16px) $grid-padding;
+    @include span-columns(12, 12);
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(7, 24);
+        margin: 0;
+        margin-right: 0;
+        padding: rhythm(6, 16px) $grid-padding 0 $grid-padding;
+        height: 100%;
+    }
+}
+
+.hero-site.hide {
+    @include at-breakpoint($break-to-medium-large) {
+        display: none;
+    }
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-image {
+    margin: 0 auto;
+}
+.left-arrow {
+    display: none;
+    @include at-breakpoint($break-to-medium-large) {
+        display: block;
+        @include arrows();
+        left: 45%;
+    }
+}
+.right-arrow {
+    display: none;
+    @include at-breakpoint($break-to-medium-large) {
+        display: block;
+        @include arrows();
+        right: 40%;
+    }
+}

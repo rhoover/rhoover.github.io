@@ -1,0 +1,24 @@
+html {
+    @extend %responsive-trigger;
+    font-family: $Fabrica, sans-serif;
+}
+
+.bg-small {
+    // @include background-carbon-fiber();
+    background: $white;
+    // @include background-image(linear-gradient(rgba($black, .7), rgba($black, .7) 5%, rgba($black, .2) 15%, $white));
+    // courtesy: https://gist.github.com/kconragan/2501349
+    background-image: linear-gradient(rgba(0, 0, 0, .018) 1px, transparent 1px), linear-gradient(0, rgba(0, 0, 0, .018) 1px, transparent 1px);
+    background-size: 5px 5px;
+    background-position:-1px -1px, -1px -1px;
+}
+.bg-medium {
+    @extend .bg-small;
+}
+.bg-small-desktop {
+    background: url('/images/desktop-bg.jpg') no-repeat fixed left top;
+    background-size: cover;
+}
+.bg-large-desktop {
+    @extend .bg-small-desktop
+}

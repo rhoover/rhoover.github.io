@@ -1,0 +1,7 @@
+.header {
+    position: fixed;
+    width: 100%;
+    @include at-breakpoint($break-to-medium-large) {
+        display: none;
+    }
+}
