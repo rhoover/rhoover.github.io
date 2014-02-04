@@ -20,13 +20,19 @@ $sites-sprite-dimensions: true;
         margin-right: 0;
         padding: rhythm(6, 16px) $grid-padding 0 $grid-padding;
         height: 100%;
+        // @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        // @include transition(opacity 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940), width 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.94s, visibility 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.94s, padding 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.94s);
     }
 }
 
-.hero-site.hide {
-    @include at-breakpoint($break-to-medium-large) {
-        display: none;
-    }
+.hero-site.ng-hide-add, .hero-site.ng-hide-remove {
+    @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+    display: block !important;
+    opacity: 1;
+}
+.hero-site.ng-hide {
+    // opacity: 0;
+    @include translate3d(-100%, 0, 0);
 }
 
 .hero-text {

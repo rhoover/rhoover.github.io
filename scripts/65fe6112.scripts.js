@@ -60,41 +60,44 @@ angular.module('mooseDogApp').directive('rhBackground', function () {
   };
 });
 'use strict';
-angular.module('mooseDogApp').directive('heroSite', function () {
-  return {
-    link: function link(scope, element, attrs) {
-      attrs.$observe('beertrail', function (hideValue) {
-        if (hideValue > 0) {
-          element.addClass('hide');
-        } else {
-          element.removeClass('hide');
-        }
-        ;
-      });
-      attrs.$observe('vba', function (hideValue) {
-        if (hideValue > 1) {
-          element.addClass('hide');
-        } else {
-          element.removeClass('hide');
-        }
-        ;
-      });
-      attrs.$observe('vftr', function (hideValue) {
-        if (hideValue > 2) {
-          element.addClass('hide');
-        } else {
-          element.removeClass('hide');
-        }
-        ;
-      });
-      attrs.$observe('yeagers', function (hideValue) {
-        if (hideValue > 3) {
-          element.addClass('hide');
-        } else {
-          element.removeClass('hide');
-        }
-        ;
-      });
-    }
-  };
-});
+angular.module('mooseDogApp').directive('heroSite', [
+  '$animate',
+  function ($animate) {
+    return {
+      link: function link(scope, element, attrs) {
+        attrs.$observe('beertrail', function (hideValue) {
+          if (hideValue > 0) {
+            $animate.addClass(element, 'hide');
+          } else {
+            $animate.removeClass(element, 'hide');
+          }
+          ;
+        });
+        attrs.$observe('vba', function (hideValue) {
+          if (hideValue > 1) {
+            $animate.addClass('hide');
+          } else {
+            $animate.removeClass('hide');
+          }
+          ;
+        });
+        attrs.$observe('vftr', function (hideValue) {
+          if (hideValue > 2) {
+            $animate.addClass('hide');
+          } else {
+            $animate.removeClass('hide');
+          }
+          ;
+        });
+        attrs.$observe('yeagers', function (hideValue) {
+          if (hideValue > 3) {
+            $animate.addClass('hide');
+          } else {
+            $animate.removeClass('hide');
+          }
+          ;
+        });
+      }
+    };
+  }
+]);

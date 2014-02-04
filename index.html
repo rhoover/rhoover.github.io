@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="Simple Portfolio">
-    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- For Chrome for Android Add To Homescreen-->
     <meta name="mobile-web-app-capable" content="yes">
@@ -35,7 +35,7 @@
         .spinning {height: 100px; width: 100px; margin: 100px auto; border: 2px solid rgba(104, 123, 54, 0.75); border-right: 0; border-bottom: 0; border-radius: 100px; transition: all 0.5s ease-in; -webkit-transition: all 0.5s ease-in; -moz-transition: all 0.5s ease-in; animation: spinner 1.5s infinite linear; -webkit-animation: spinner 1.5s infinite linear; -moz-animation: spinner 1.5s infinite linear; -o-animation: spinner 1.5s infinite linear;}
     </style>
 
-    <link rel="stylesheet" href="styles/a41b5c57.main.css">
+    <link rel="stylesheet" href="styles/b8c428f9.main.css">
 </head>
 <body ng-view="">
     <!--[if lt IE 9]>
@@ -61,28 +61,28 @@
         </section>
         <section class="carousel" ng-controller="CarouselCtrl">
             <div ng-click="slideLeft()"><span class="left-arrow"></span></div>
-            <div hero-site="" beertrail="{{counter}}" class="hero-site">
+            <div hero-site="" class="hero-site" ng-hide="counter > 0">
                 <p class="hero-text">Vermont Craft BeerTrail</p>
                 <p class="hero-text">Web App</p>
                 <div class="sites-beertrail hero-image"></div>
-            <a href="http://www.beertrail.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
-            <a href="https://github.com/rhoover/vt-beer-trail" class="button-github-2" target="_blank">View Site Code On GitHub</a>
+                <a href="http://www.beertrail.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
+                <a href="https://github.com/rhoover/vt-beer-trail" class="button-github-2" target="_blank">View Site Code On GitHub</a>
             </div>
-            <div hero-site="" vba="{{counter}}" class="hero-site">
+            <div hero-site="" class="hero-site" ng-hide="counter > 1">
                 <p class="hero-text">Vermont Brewers Association</p>
                 <p class="hero-text">Web Site</p>
                 <div class="sites-vba hero-image"></div>
                 <a href="http://www.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
                 <a href="https://github.com/rhoover/vermont-brewers" class="button-github-2" target="_blank">View Site Code On GitHub</a>
             </div>
-            <div hero-site="" vftr="{{counter}}" class="hero-site">
+            <div hero-site="" class="hero-site" ng-hide="counter > 2">
                 <p class="hero-text">Valley Forge Trail Riders</p>
                 <p class="hero-text">Web Site</p>
                 <div class="sites-vftr hero-image"></div>
                 <a href="http://www.vftr.org" class="button-site" target="_blank">View Site</a>
                 <a href="https://github.com/rhoover/vftr" class="button-github-2" target="_blank">View Site Code On GitHub</a>
             </div>
-            <div hero-site="" yeagers="{{counter}}" class="hero-site">
+            <div hero-site="" class="hero-site" ng-hide="counter > 3">
                 <p class="hero-text">Yeagers Tree Farm</p>
                 <p class="hero-text">Web Site</p>
                 <div class="sites-yeagers hero-image"></div>
@@ -126,6 +126,6 @@
 
     <script src="scripts/d72fe79f.angular-modules.js"></script>
 
-    <script src="scripts/c2b63ba9.scripts.js"></script>
+    <script src="scripts/65fe6112.scripts.js"></script>
 </body>
 </html>
