@@ -64,7 +64,7 @@ angular.module('mooseDogApp').directive('heroSite', [
   '$animate',
   function ($animate) {
     return {
-      link: function link(scope, element, attrs) {
+      link: function (scope, element, attrs) {
         attrs.$observe('beertrail', function (hideValue) {
           if (hideValue > 0) {
             $animate.addClass(element, 'hide');
