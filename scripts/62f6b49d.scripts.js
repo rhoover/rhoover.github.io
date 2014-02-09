@@ -65,32 +65,32 @@ angular.module('mooseDogApp').directive('heroSite', [
   function ($animate) {
     return {
       link: function (scope, element, attrs) {
-        attrs.$observe('beertrail', function (hideValue) {
-          if (hideValue > 0) {
+        attrs.$observe('beertrail', function (counter) {
+          if (counter > 0) {
             $animate.addClass(element, 'hide');
           } else {
             $animate.removeClass(element, 'hide');
           }
           ;
         });
-        attrs.$observe('vba', function (hideValue) {
-          if (hideValue > 1) {
+        attrs.$observe('vba', function (counter) {
+          if (counter > 1) {
             $animate.addClass('hide');
           } else {
             $animate.removeClass('hide');
           }
           ;
         });
-        attrs.$observe('vftr', function (hideValue) {
-          if (hideValue > 2) {
+        attrs.$observe('vftr', function (counter) {
+          if (counter > 2) {
             $animate.addClass('hide');
           } else {
             $animate.removeClass('hide');
           }
           ;
         });
-        attrs.$observe('yeagers', function (hideValue) {
-          if (hideValue > 3) {
+        attrs.$observe('yeagers', function (counter) {
+          if (counter > 3) {
             $animate.addClass('hide');
           } else {
             $animate.removeClass('hide');
