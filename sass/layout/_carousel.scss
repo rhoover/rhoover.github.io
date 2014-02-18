@@ -5,7 +5,8 @@ $sites-sprite-dimensions: true;
 
 .carousel {
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(19 omega, 24);
+        @include span-columns(19, 24);
+        margin-right: 0;
         height: 100%;
         overflow: hidden;
     }
