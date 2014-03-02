@@ -12,7 +12,11 @@
 %responsive-trigger {
     &:after {
         content: "phone";
-        display: none;
+        //this should be display:none, but the position:absolute hack must remain until Chrome fixes its bug with getComputedStyle
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -1000px;
         @include at-breakpoint($break-to-medium) {
             content: "tablet";
         }

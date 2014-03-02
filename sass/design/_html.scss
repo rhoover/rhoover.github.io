@@ -1,8 +1,9 @@
 html {
-    @extend %responsive-trigger;
     font-family: $Fabrica, sans-serif;
 }
-
+body {
+    @extend %responsive-trigger;
+}
 .bg-small {
     // @include background-carbon-fiber();
     background: $white;

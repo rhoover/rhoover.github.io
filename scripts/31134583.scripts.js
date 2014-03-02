@@ -4,6 +4,31 @@ angular.module('mooseDogApp', [
   'ngTouch'
 ]);
 'use strict';
+angular.module('mooseDogApp').directive('rhBackground', function () {
+  return {
+    restrict: 'A',
+    link: function (scope, element, attrs) {
+      var result = getComputedStyle(element[0], ':after').content;
+      result = result.replace(/"/g, '');
+      switch (result) {
+      case 'phone':
+        element.addClass('bg-small');
+        break;
+      case 'tablet':
+        element.addClass('bg-medium');
+        break;
+      case 'small-desktop':
+        element.addClass('bg-small-desktop');
+        break;
+      case 'large-desktop':
+        element.addClass('bg-large-desktop');
+        break;
+      }
+      ;
+    }
+  };
+});
+'use strict';
 angular.module('mooseDogApp').controller('HtmlCtrl', [
   '$scope',
   function ($scope) {
@@ -35,27 +60,3 @@ angular.module('mooseDogApp').controller('CarouselCtrl', [
     };
   }
 ]);
-'use strict';
-angular.module('mooseDogApp').directive('rhBackground', function () {
-  return {
-    restrict: 'A',
-    link: function (scope, element, attrs) {
-      var result = getComputedStyle(element[0], ':after').content;
-      result = result.replace(/"/g, '');
-      switch (result) {
-      case 'phone':
-        element.addClass('bg-small');
-        break;
-      case 'tablet':
-        element.addClass('bg-medium');
-        break;
-      case 'small-desktop':
-        element.addClass('bg-small-desktop');
-        break;
-      case 'large-desktop':
-        element.addClass('bg-large-desktop');
-        break;
-      }
-    }
-  };
-});
