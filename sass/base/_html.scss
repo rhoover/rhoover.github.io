@@ -1,13 +1,8 @@
-html {
-    font-family: $Fabrica, sans-serif;
-}
 body {
     @extend %responsive-trigger;
 }
 .bg-small {
-    // @include background-carbon-fiber();
-    background: $white;
-    // @include background-image(linear-gradient(rgba($black, .7), rgba($black, .7) 5%, rgba($black, .2) 15%, $white));
+    background: rgb(240, 240, 240);
     // courtesy: https://gist.github.com/kconragan/2501349
     background-image: linear-gradient(rgba(0, 0, 0, .018) 1px, transparent 1px), linear-gradient(0, rgba(0, 0, 0, .018) 1px, transparent 1px);
     background-size: 5px 5px;

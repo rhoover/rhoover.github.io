@@ -1,0 +1,10 @@
+$white: rgb(240, 240, 240);
+$black: rgb(35, 35, 35);
+$green: rgb(102, 125, 44);
+$white-text: rgba($white, .80);
+%white-text {
+    color: rgba($white, .80);
+}
+%black-text {
+    color: rgba($black, .75);
+}

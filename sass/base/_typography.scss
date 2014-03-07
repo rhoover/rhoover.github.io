@@ -5,3 +5,6 @@
     'fabrica-webfont.eot');
 
     $Fabrica: 'Fabrica', arial, sans-serif;
+html {
+    font-family: $Fabrica, verdana, arial, helvetica, sans-serif;
+}

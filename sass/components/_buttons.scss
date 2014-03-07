@@ -1,0 +1,21 @@
+.button-about-github {
+    @extend %button-about;
+    @extend %button;
+    @extend %button-grey;
+}
+.button-about-contact {
+    @extend %button-about;
+    @extend %button;
+    @extend %button-green;
+}
+.button-site {
+    @extend %button-carousel;
+    @extend %button;
+    @extend %button-green;
+}
+.button-github-2 {
+    @extend %button-carousel;
+    @extend %button;
+    @extend %white-text;
+    @extend %button-grey;
+}
