@@ -1,0 +1,7 @@
+.work {
+    @include span-columns(12, 12);
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(22, 24);
+        @include squish(1,1);
+    }
+}

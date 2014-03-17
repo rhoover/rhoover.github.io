@@ -6,13 +6,20 @@
     color: rgba($black, .75);
     text-align: center;
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(19, 19);
-        margin-right: 0px;
+        @include span-columns(22, 24);
+        // margin: 0px 0px 0px $column-width;
+        @include squish(1,1);
         text-align: justify;
         color: rgba($white, .75);
         border-top: .1em solid rgba($black, .95);
         border-bottom: .1em solid rgba($black, .95);
         background-color: rgba($black, .2);
+    }
+}
+.contact-link {
+    color: $green;
+    @include at-breakpoint($break-to-medium-large) {
+        color: $white;
     }
 }
 .story-services {

@@ -10,12 +10,17 @@ $tools-sprite-dimensions: true;
     color: rgba($black, .75);
     text-align: center;
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(19, 19);
-        margin-right: 0px;
+        @include span-columns(22, 24);
+        @include squish(1,1);
         text-align: left;
-        border-top: .1em solid rgba($black, .75);
-        background-color: rgba($black, .3);
+        border-bottom: none;
         color: rgba($white, .75);
+        h2 {
+            padding: rhythm(.5, 16px) 0;
+            border-top: .1em solid rgba($black, .75);
+            border-bottom: .1em solid rgba($black, .75);
+            @include adjust-font-size-to(22px);
+        }
     }
 }
 

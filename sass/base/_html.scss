@@ -3,7 +3,7 @@ body {
 }
 .bg-small {
     background: rgb(240, 240, 240);
-    // courtesy: https://gist.github.com/kconragan/2501349
+    // courtesy: https://gist.github.com/kconragan/2501349 hatch pattern w/CSS
     background-image: linear-gradient(rgba(0, 0, 0, .018) 1px, transparent 1px), linear-gradient(0, rgba(0, 0, 0, .018) 1px, transparent 1px);
     background-size: 5px 5px;
     background-position:-1px -1px, -1px -1px;
