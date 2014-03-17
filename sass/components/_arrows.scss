@@ -3,12 +3,11 @@
     @include at-breakpoint($break-to-medium-large) {
         display: block;
         @include arrows();
-        left: 45%;
-        @include translateX(-45%);
+        left: 50%;
         @include rotate(45deg);
         background: transparent;
-        border-left: .07em solid rgba($white, .65);
-        border-bottom: .07em solid rgba($white, .65);
+        border-left: .07em solid rgba($white, .75);
+        border-bottom: .07em solid rgba($white, .75);
         color: rgba($white, .45);
         &:hover {
             cursor: pointer;
@@ -22,12 +21,11 @@
     @include at-breakpoint($break-to-medium-large) {
         display: block;
         @include arrows();
-        right: 40%;
-        @include translateX(-40%);
+        right: 35%;
         @include rotate(45deg);
         background: transparent;
-        border-right: .07em solid rgba($white, .65);
-        border-top: .07em solid rgba($white, .65);
+        border-right: .07em solid rgba($white, .75);
+        border-top: .07em solid rgba($white, .75);
         &:hover {
             cursor: pointer;
             border-right: .15em solid rgba($white, .95);

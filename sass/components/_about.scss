@@ -8,6 +8,10 @@
     }
     @include at-breakpoint($break-to-medium-large) {
         @include span-columns(5, 24);
+        margin-right: 0px;
+        position: fixed;
+        top: 0;
+        left: 0;
         padding: 0 $grid-padding;
         height: 100%;
         color: rgba($white, .80);

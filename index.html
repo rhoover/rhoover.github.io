@@ -35,7 +35,7 @@
         .spinning {height: 100px; width: 100px; margin: 100px auto; border: 2px solid rgba(104, 123, 54, 0.75); border-right: 0; border-bottom: 0; border-radius: 100px; transition: all 0.5s ease-in; -webkit-transition: all 0.5s ease-in; -moz-transition: all 0.5s ease-in; animation: spinner 1.5s infinite linear; -webkit-animation: spinner 1.5s infinite linear; -moz-animation: spinner 1.5s infinite linear; -o-animation: spinner 1.5s infinite linear;}
     </style>
 
-    <link rel="stylesheet" href="styles/1e3279cf.main.css">
+    <link rel="stylesheet" href="styles/42f1b9c8.main.css">
 </head>
 <body ng-view="" rh-background="">
     <!--[if lt IE 9]>
@@ -47,12 +47,12 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <header class="header">MooseDog Studios</header>
     <section class="loader" ng-if="loading">
         <div class="spinning"></div>
     </section>
-    <header class="header">MooseDog Studios</header>
     <main class="container">
-        <section class="about">
+        <aside class="about">
             <img src="/images/ea38c3c6.md_logo.png" class="logo">
             <p>In some parts of Vermont,<br>I'm referred to as<br><span class="me-strong">MooseDog Studios</span>, </p>
             <p>in other parts as<br><span class="me-strong">Robin Hoover</span>.</p>
@@ -60,64 +60,87 @@
             <p>up here, convention always takes a back seat to quality.</p>
             <a href="mailto:robin.hoover@gmail.com?subject=Initial%20Contact" class="button-about-contact">Contact Me</a>
             <a href="https://github.com/rhoover/rhoover.github.io" class="button-about-github" target="_blank">View Site Code On GitHub</a>
-        </section>
-        <section class="carousel" ng-controller="CarouselCtrl">
-            <div ng-click="slideRight()"><span class="left-arrow"></span></div>
-            <div hero-site="" class="hero-site" ng-hide="counter > 0">
-                <p class="hero-text">Vermont Craft BeerTrail</p>
-                <p class="hero-text">~Web App~</p>
-                <div class="sites-beertrail hero-image"></div>
-                <p class="tags">(mobile-only, web-app, 100% custom)</p>
-                <a href="http://www.beertrail.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
-                <a href="https://github.com/rhoover/vt-beer-trail" class="button-github-2" target="_blank">View Site Code On GitHub</a>
-            </div>
-            <div hero-site="" class="hero-site" ng-hide="counter > 1">
-                <p class="hero-text">Vermont Brewers Association</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-vba hero-image"></div>
-                <p class="tags">(100% custom Wordpress CMS, flexible, responsive, mobile-ready)</p>
-                <a href="http://www.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
-                <a href="https://github.com/rhoover/vermont-brewers" class="button-github-2" target="_blank">View Site Code On GitHub</a>
-            </div>
-            <div hero-site="" class="hero-site" ng-hide="counter > 2">
-                <p class="hero-text">Valley Forge Trail Riders</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-vftr hero-image"></div>
-                <p class="tags">(100% custom Wordpress CMS, flexible, responsive, mobile-ready)</p>
-                <a href="http://www.vftr.org" class="button-site" target="_blank">View Site</a>
-                <a href="https://github.com/rhoover/vftr" class="button-github-2" target="_blank">View Site Code On GitHub</a>
-            </div>
-            <div hero-site="" class="hero-site" ng-hide="counter > 3">
-                <p class="hero-text">Yeagers Tree Farm</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-yeagers hero-image"></div>
-                <p class="tags">(100% custom HTML, flexible, responsive, mobile-ready)</p>
-                <a href="http://www.yeagerstrees.com" class="button-site" target="_blank">View Site</a>
-                <a href="https://github.com/rhoover/YeagersTreeFarm" class="button-github-2" target="_blank">View Site Code On GitHub</a>
-            </div>
-            <div hero-site="" class="hero-site">
-                <p class="hero-text">Prohibition Pig</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-propig hero-image"></div>
-                <p class="tags">(Customized Wordpress CMS, flexible)</p>
-                <a href="http://www.prohibitionpig.com" class="button-site" target="_blank">View Site</a>
-            </div>
-            <div hero-site="" class="hero-site">
-                <p class="hero-text">PowerSealUSA</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-powerseal hero-image"></div>
-                <p class="tags">(Customized Wordpress CMS)</p>
-                <a href="http://www.powersealusa.com" class="button-site" target="_blank">View Site</a>
-            </div>
-            <div hero-site="" class="hero-site">
-                <p class="hero-text">Hudson-Chatham Winery</p>
-                <p class="hero-text">~Web Site~</p>
-                <div class="sites-hudson hero-image"></div>
-                <p class="tags">(Customized Wordpress CMS)</p>
-                <a href="http://www.hudson-chathamwinery.com" class="button-site" target="_blank">View Site</a>
-            </div>
-            <div ng-click="slideLeft()"><span class="right-arrow"></span></div>
-        </section>
+        </aside>
+        <div class="content">
+            <section class="story">
+                <p>I am an independent web designer, creator and front-end developer, easy to reach and easy to talk with, <span class="story-services">specializing in 100% custom sites for your small or medium sized business or organization:</span>  full-on content management systems, digital branding and information sites, interactive web-based applications.<br><br></p><p>All created from the get go to seamlessly deal with the flood of different gadgets your audience is using to access the web.</p>
+            </section>
+            <section>
+                <!-- <span ng-click="slideRight()" class="left-arrow"></span> -->
+                    <!-- <div hero-site class="hero-site" ng-hide="counter > 0"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Vermont Brewers Association</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-vba hero-image"></div>
+                        <p class="tags">(100% custom Wordpress CMS, flexible, responsive, mobile-ready)</p>
+                        <a href="http://www.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
+                        <a href="https://github.com/rhoover/vermont-brewers" class="button-github-2" target="_blank">View Site Code On GitHub</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site" ng-hide="counter > 1"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Vermont Craft BeerTrail</p>
+                        <p class="hero-text">~Web App~</p>
+                        <div class="sites-beertrail hero-image"></div>
+                        <p class="tags">(mobile-only, web-app, 100% custom)</p>
+                        <a href="http://www.beertrail.vermontbrewers.com" class="button-site" target="_blank">View Site</a>
+                        <a href="https://github.com/rhoover/vt-beer-trail" class="button-github-2" target="_blank">View Site Code On GitHub</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site" ng-hide="counter > 2"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Valley Forge Trail Riders</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-vftr hero-image"></div>
+                        <p class="tags">(100% custom Wordpress CMS, flexible, responsive, mobile-ready)</p>
+                        <a href="http://www.vftr.org" class="button-site" target="_blank">View Site</a>
+                        <a href="https://github.com/rhoover/vftr" class="button-github-2" target="_blank">View Site Code On GitHub</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site" ng-hide="counter > 3"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Yeagers Tree Farm</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-yeagers hero-image"></div>
+                        <p class="tags">(100% custom HTML, flexible, responsive, mobile-ready)</p>
+                        <a href="http://www.yeagerstrees.com" class="button-site" target="_blank">View Site</a>
+                        <a href="https://github.com/rhoover/YeagersTreeFarm" class="button-github-2" target="_blank">View Site Code On GitHub</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Prohibition Pig</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-propig hero-image"></div>
+                        <p class="tags">(Customized Wordpress CMS, flexible)</p>
+                        <a href="http://www.prohibitionpig.com" class="button-site" target="_blank">View Site</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">PowerSealUSA</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-powerseal hero-image"></div>
+                        <p class="tags">(Customized Wordpress CMS)</p>
+                        <a href="http://www.powersealusa.com" class="button-site" target="_blank">View Site</a>
+                    </div>
+                    <!-- <div hero-site class="hero-site"> -->
+                    <div class="hero-site">
+                        <p class="hero-text">Hudson-Chatham Winery</p>
+                        <p class="hero-text">~Web Site~</p>
+                        <div class="sites-hudson hero-image"></div>
+                        <p class="tags">(Customized Wordpress CMS)</p>
+                        <a href="http://www.hudson-chathamwinery.com" class="button-site" target="_blank">View Site</a>
+                </div>
+                <!-- <span ng-click="slideLeft()" class="right-arrow"></span> -->
+            </section>
+            <section class="tools">
+                <p>There's always tools; tools to build, tools to create.</p>
+                <div class="tools-logos">
+                    <a href="https://wordpress.org/" title="Wordpress for Content Management" target="_blank" class="tools-wordpress tools-image"></a>
+                    <a href="http://www.w3schools.com/html/html5_intro.asp" title="HTML 5 for Modern" target="_blank" class="tools-html5 tools-image"></a>
+                    <a href="http://compass-style.org/" title="Compass for CSS" target="_blank" class="tools-compass tools-image"></a>
+                    <a href="http://angularjs.org/" title="AngularJS for Interactive" target="_blank" class="tools-angularjs tools-image"></a>
+                    <a href="http://yeoman.io/" title="Yeoman for Creation" target="_blank" class="tools-yeoman tools-image"></a>
+                    <a href="http://gruntjs.com/" title="Grunt for Building" target="_blank" class="tools-grunt tools-image"></a>
+                </div>
+            </section>
+        </div> <!-- end .content -->
     </main>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
@@ -131,7 +154,7 @@
         ga('send', 'pageview');
     </script>
     -->
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
 
     <script src="scripts/04b3ea61.angular-modules.js"></script>
 

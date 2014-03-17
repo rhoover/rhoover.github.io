@@ -3,26 +3,20 @@ $sites-sprite-dimensions: true;
 @import "sites/*.png";
 @include all-sites-sprites;
 
-.carousel {
-    @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(19, 24);
-        margin-right: 0;
-        height: 100%;
-        overflow: hidden;
-    }
-}
-
 .hero-site {
     padding: rhythm(1, 16px) $grid-padding;
     @include span-columns(12, 12);
-    border-bottom: .06em solid rgba($black, .45);
+    border-bottom: .1em solid rgba($black, .45);
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(7, 24);
+        @include span-columns(6, 19);
+        display: block;
         margin: 0;
         margin-right: 0;
-        padding: rhythm(6, 16px) $grid-padding 0 $grid-padding;
-        height: 100%;
+        padding: rhythm(3, 16px) $grid-padding 0 $grid-padding;
         border-bottom: none;
+        &:last-of-type{
+            padding-bottom: rhythm(1, 16px);
+        }
     }
 }
 .tags {
@@ -31,20 +25,11 @@ $sites-sprite-dimensions: true;
     font-style: italic;
     @extend %black-text;
     @include adjust-font-size-to(12px);
+    min-height: rhythm(3, 16px);
     @include at-breakpoint($break-to-medium-large) {
         color: $white-text;
     }
 }
-
-.hero-site.ng-hide-add, .hero-site.ng-hide-remove {
-    @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
-    display: block !important;
-    opacity: 1;
-}
-.hero-site.ng-hide {
-    @include translate3d(-100%, 0, 0);
-}
-
 .hero-text {
     text-align: center;
     color: rgba($black, .75);
@@ -55,4 +40,7 @@ $sites-sprite-dimensions: true;
 
 .hero-image {
     margin: 0 auto;
+    @include at-breakpoint($break-to-medium-large) {
+        opacity: 0.8;
+    }
 }

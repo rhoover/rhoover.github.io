@@ -1,0 +1,31 @@
+.content {
+    @include at-breakpoint($break-to-medium-large) {
+        @include span-columns(19, 24);
+        margin-left: $column-width*5.45;
+        margin-right: 0px;
+        height: 100%;
+        padding-top: rhythm(1, 16px);
+    }
+}
+
+
+
+
+
+// .hero-site.ng-hide-add, .hero-site.ng-hide-remove {
+//     @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+//     display: block !important;
+//     opacity: 1;
+// }
+// .hero-site.ng-hide {
+//     @include translate3d(-100%, 0, 0);
+// }
+// .hero-site.ng-move-add, .hero-site.ng-move-remove {
+//     @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+//     display: block !important;
+//     opacity: 1;
+// }
+// .hero-site.ng-move {
+//     @include translate3d(-100%, 0, 0);
+// }
+
