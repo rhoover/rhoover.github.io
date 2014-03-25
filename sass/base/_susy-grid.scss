@@ -18,8 +18,10 @@ $legacy-support-for-ie7 : false;
 
 //Breaks
 $break-to-medium: 37.5em 16; //break from phone to tablet
-$break-to-medium-large: 64em 24; //break from tablet to small desktop window
-$break-to-large: 75em 24; //break from tablet to desktop
+$break-to-medium-large: 75em 24; //break from tablet to small desktop window
+// $break-to-medium-large: 64em 24; //break from tablet to small desktop window
+$break-to-large: 87.5em 24; //break from tablet to desktop
+// $break-to-large: 75em 24; //break from tablet to desktop
 
 
 // http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/

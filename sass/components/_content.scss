@@ -1,7 +1,7 @@
 .content {
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(19, 24);
-        margin-left: $column-width*5.45;
+        @include span-columns(18, 24);
+        @include squish(6, 0);
         margin-right: 0px;
         height: 100%;
         padding-top: rhythm(1, 16px);

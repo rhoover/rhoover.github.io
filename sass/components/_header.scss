@@ -1,6 +1,6 @@
 .header {
     text-align: center;
-    @include adjust-font-size-to(22px);
+    @extend %t-large;
     color: $white;
     @include text-shadow(rgba($black, .5) 0 0 3px);
     @include background-image(linear-gradient(rgba($black, .85), rgba($black, .9)));

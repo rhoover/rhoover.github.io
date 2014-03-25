@@ -3,12 +3,13 @@
     @include span-columns(12, 12);
     margin-right: 0px;
     border-bottom: .1em solid rgba($black, .45);
+    @extend %t-base;
+    @extend %t-light;
     color: rgba($black, .75);
     text-align: center;
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(22, 24);
-        // margin: 0px 0px 0px $column-width;
-        @include squish(1,1);
+        @include span-columns(17, 18);
+        margin-right: 0px;
         text-align: justify;
         color: rgba($white, .75);
         border-top: .1em solid rgba($black, .95);
@@ -24,5 +25,5 @@
 }
 .story-services {
     font-style: italic;
-    font-weight: bold;
+    @extend %t-strong;
 }

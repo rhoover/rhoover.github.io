@@ -23,7 +23,6 @@
     margin-top: rhythm(2, 16px);
 }
 %button {
-    @include adjust-font-size-to(12px);
     text-decoration: none;
     text-align: center;
     border: .1em solid rgba($black, .5);
@@ -45,6 +44,7 @@
 }
 %button-grey {
     @include background-image(linear-gradient(rgba($black, .25), rgba($black, .75)));
+    @extend %t-small;
     @extend %white-text;
     @include at-breakpoint($break-to-medium-large) {
         color: rgba($white, .80);
@@ -68,9 +68,9 @@
 }
 
 // %arrows {
-@mixin arrows() {
-    position: absolute;
-    bottom: rhythm(1, 16px);
-    width: $column-width;
-    height: rhythm(2.7, 16px);
-}
+// @mixin arrows() {
+//     position: absolute;
+//     bottom: rhythm(1, 16px);
+//     width: $column-width;
+//     height: rhythm(2.7, 16px);
+// }

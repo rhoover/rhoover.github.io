@@ -10,8 +10,8 @@ $tools-sprite-dimensions: true;
     color: rgba($black, .75);
     text-align: center;
     @include at-breakpoint($break-to-medium-large) {
-        @include span-columns(22, 24);
-        @include squish(1,1);
+        @include span-columns(17, 18);
+        margin-right: 0px;
         text-align: left;
         border-bottom: none;
         color: rgba($white, .75);
@@ -19,8 +19,10 @@ $tools-sprite-dimensions: true;
             padding: rhythm(.5, 16px) 0;
             border-top: .1em solid rgba($black, .75);
             border-bottom: .1em solid rgba($black, .75);
-            @include adjust-font-size-to(22px);
         }
+    }
+    h2 {
+            @extend %t-medium;
     }
 }
 
@@ -37,5 +39,6 @@ $tools-sprite-dimensions: true;
     @include at-breakpoint($break-to-medium-large) {
         display: inline-block;
         margin-right: $grid-padding;
+        opacity: 0.8;
     }
 }
