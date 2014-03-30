@@ -1,9 +1,10 @@
 .header {
+    padding: rhythm(.25, 16px);
     text-align: center;
     @extend %t-large;
     color: $white;
     @include text-shadow(rgba($black, .5) 0 0 3px);
-    @include background-image(linear-gradient(rgba($black, .85), rgba($black, .9)));
+    @include background-image(linear-gradient(rgba($black, .75), rgba($black, .9)));
     @include box-shadow(rgba($black, .15) 0 .2em .5em);
     border-bottom: .06em solid $black;
 }

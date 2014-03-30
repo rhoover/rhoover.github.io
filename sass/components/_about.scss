@@ -1,7 +1,7 @@
 .about {
     padding: 0 $grid-padding rhythm(1, 16px) $grid-padding;
     p {
-        @extend %t-base;
+        @extend %t-medium;
         @extend %t-light;
         &:last-of-type {
             margin-bottom: rhythm(2, 16px);

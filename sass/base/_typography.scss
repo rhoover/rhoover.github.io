@@ -33,7 +33,7 @@ $round-to-nearest-half-line: true;
         }
     }
     @if $size == "base" {
-        @include adjust-font-size-to($small-font-size, $small-font-leading);
+        @include adjust-font-size-to($base-font-size, $base-font-leading);
         @include at-breakpoint($break-to-medium) {
             @include adjust-font-size-to($base-font-size, $base-font-leading);
         }
